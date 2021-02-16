@@ -1,0 +1,28 @@
+<ul class="list-group">
+  <td style = "vertical-align">
+    <table class = "table">
+      <tbody>
+      <div style = "margin-bottom: 20px">
+        <input class="form-control mr-sm-2" type="search" [(ngModel)]="searchEmployee" placeholder="Search text">
+      </div>
+      <tr>
+        <th>Имя</th>
+        <th>Компания</th>
+        <th>Должность</th>
+        <th>Телефон</th>
+        <th>Почта</th>
+      </tr>
+      <tr *ngFor="let employee of employees | filter: searchEmployee">
+        <td>{{employee.employeeName}}</td>
+        <td>{{employee.company}}</td>
+        <td>{{employee.employeePosition}}</td>
+        <td>{{employee.employeePhoneNumber}}</td>
+        <td>{{employee.employeeMail}}</td>
+      </tr>
+      <div *ngIf="(employees | filter:searchEmployee).length <1">
+        Not Found
+      </div>
+      </tbody>
+    </table>
+  </td>
+</ul>

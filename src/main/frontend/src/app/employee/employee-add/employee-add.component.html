@@ -1,0 +1,32 @@
+<div class="col-md-6">
+  <h2 class="text-center">Добавить работника</h2>
+  <form ngNativeValidate #form>
+    <div class="form-group">
+      <label for="name">Имя:</label>
+      <input type="name" [(ngModel)]="employee.employeeName" placeholder="Имя" name="employeeName" class="form-control" id="employeeName" pattern = "^[А-Яа-яЁё\s]+$" title = "Имя на русском" required>
+    </div>
+
+    <div class="form-group">
+      <label for="company">Компания:</label>
+      <input [(ngModel)]="employee.company" placeholder="Компания" name="company" class="form-control" id="company" pattern = "^[A-Za-zА-Яа-яЁё\s]+$" title = "Название компании" required>
+    </div>
+
+    <div class="form-group">
+      <label for="employeePosition">Должность:</label>
+      <input [(ngModel)]="employee.employeePosition" placeholder="Должность" name="employeePosition" class="form-control" id="employeePosition" pattern = "^[А-Яа-яЁё\s]+$" title = "Должность на русском" required>
+    </div>
+
+    <div class="form-group">
+      <label for="employeePhoneNumber">Телефон</label>
+      <input [(ngModel)]="employee.employeePhoneNumber" placeholder="Телефон" name="employeePhoneNumber" class="form-control" id="employeePhoneNumber"  pattern = "[78][0-9]{10}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="employeeMail">Почта</label>
+      <input [(ngModel)]="employee.employeeMail" placeholder="Почта" name="employeeMail" class="form-control" id="employeeMail" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+    </div>
+
+    <button class="btn btn-success" (click)="form.checkValidity() ? createEmployee(): null">Добавить</button>
+  </form>
+  <div class="col-md-2">&nbsp;</div>
+</div>
