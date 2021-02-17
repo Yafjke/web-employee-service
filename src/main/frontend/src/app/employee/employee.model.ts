@@ -1,16 +1,16 @@
 export class Employee{
   public id: number;
-  public name: string;
-  public company: string;
-  public position: string;
-  public phonenum: string;
-  public mail: string;
+  public employeeName: string;
+  public employeeCompany: string;
+  public employeePosition: string;
+  public employeePhoneNumber: string;
+  public employeeMail: string;
 
-constructor(name: string, company: string, position: string, phonenum:string, mail:string) {
-  this.name = name;
-  this.company = company;
-  this.position = position;
-  this.phonenum = phonenum;
-  this.mail = mail;
+constructor(employeeName: string, employeeCompany: string, employeePosition: string, employeePhoneNumber:string, employeeMail:string) {
+  this.employeeName = employeeName;
+  this.employeeCompany = employeeCompany;
+  this.employeePosition = employeePosition;
+  this.employeePhoneNumber = employeePhoneNumber;
+  this.employeeMail = employeeMail;
 }
 }

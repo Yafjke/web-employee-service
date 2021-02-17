@@ -5,6 +5,7 @@ import com.webemployeeservice.app.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @CrossOrigin(maxAge = 3600)
@@ -20,7 +21,7 @@ public class EmployeeController {
         return EmployeeService.returnAllEmployees();
     }
     @PostMapping()
-    public void SendEmployee(@RequestBody Employee employee){
+    public void SendEmployee(@Valid @RequestBody Employee employee){
         EmployeeService.saveEmployee(employee);
     }
 }
