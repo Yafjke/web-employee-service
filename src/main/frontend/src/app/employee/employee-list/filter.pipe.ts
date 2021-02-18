@@ -17,7 +17,7 @@ export class FilterPipe implements PipeTransform {
    return items.filter(it => {
       return it.employeeName.toLocaleLowerCase().indexOf(searchEmployee) > - 1 ||
        it.employeePosition.toLocaleLowerCase().indexOf(searchEmployee) > - 1 ||
-       it.company.toLocaleLowerCase().indexOf(searchEmployee) > - 1 ||
+       it.employeeCompany.toLocaleLowerCase().indexOf(searchEmployee) > - 1 ||
        it.employeePhoneNumber.toLocaleLowerCase().indexOf(searchEmployee) > - 1 ||
        it.employeeMail.toLocaleLowerCase().indexOf(searchEmployee) > - 1;
     });
