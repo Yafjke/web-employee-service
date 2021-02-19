@@ -35,6 +35,5 @@ public class EmployeeDao implements DaoInterface<Employee> {
     @Override
     public void delete(Employee employee) {
         //not in use
-        //no deleto bonito from database. Bad practice.
     }
 }
